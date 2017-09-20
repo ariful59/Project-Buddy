@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/post_text_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/author_and_status"
+        >
+
+        <include
+            android:id="@+id/post_author_layout"
+            layout="@layout/include_post_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/author_status"
+            android:text="is doing it"
+            style="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+ />
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/post_text_layout"
+        layout="@layout/include_post_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/author_and_status"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/button_left"
+        android:text="Left Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/post_text_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <Button
+        android:id="@+id/button_right"
+        android:text="Right Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/button2" />
+
+
+    <LinearLayout
+        android:id="@+id/comment_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/button_left"
+        android:layout_marginTop="10dp"
+        android:weightSum="1.0">
+
+        <EditText
+            android:id="@+id/field_comment_text"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="Write a comment..."/>
+
+        <Button
+            android:id="@+id/button_post_comment"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:text="Post"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/comment_form"
+        tools:listitem="@layout/item_comment" />
+
+
+
+
+</RelativeLayout>

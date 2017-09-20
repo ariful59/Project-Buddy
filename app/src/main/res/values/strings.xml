@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">"Project Buddy"</string>
+    <string name="action_settings">Settings</string>
+    <string name="chooser">Send message...</string>
+
+    //firebase authenticate
+
+    <string name="sign_in">Sign In</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+
+    /// end of authenticate
+
+    //for database
+    <string name="menu_logout">Log out</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
